@@ -10,6 +10,7 @@ driver:
 transport:
   username: ec2-user
   aws_ssh_key_id: <%= ENV['AWS_SSH_KEY_ID']  %>
+  ssh_key: <%= ENV['AWS_SSH_KEY_PATH'] %>
 
 provisioner:
   name: chef_zero
@@ -21,6 +22,7 @@ platforms:
   - name: pvm-amimoto
     driver:
       image_id: ami-33cc2533 # 1.3.2
+      instance_type: t1.micro
   - name: hvm-amimoto
     driver:
       image_id: ami-0e00030f # 1.1
