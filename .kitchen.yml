@@ -1,0 +1,36 @@
+---
+driver:
+  name: ec2
+  region: ap-northeast-1
+  availability_zone: ap-northeast-1c
+  subnet_id: <%= ENV['AWS_SUBNET_ID']  %>
+  associate_public_ip: true
+  instance_type: t2.micro
+
+transport:
+  username: ec2-user
+  aws_ssh_key_id: <%= ENV['AWS_SSH_KEY_ID']  %>
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: hiphop-amimoto
+    driver:
+      image_id: ami-e9e414e9 # 1.0
+  - name: pvm-amimoto
+    driver:
+      image_id: ami-33cc2533 # 1.3.2
+  - name: hvm-amimoto
+    driver:
+      image_id: ami-0e00030f # 1.1
+
+verifier:
+  name: shell
+  command: bundle exec rspec -fd
+  sleep: 300
+
+suites:
+  - name: default
+    run_list:
+    attributes:
