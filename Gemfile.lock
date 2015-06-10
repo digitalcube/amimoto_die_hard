@@ -1,5 +1,7 @@
-PATH
-  remote: ../../higanworks/test-kitchen
+GIT
+  remote: git://github.com/higanworks/test-kitchen.git
+  revision: 014323e11242e8b2634287859214ac20f1a3bef5
+  ref: verify_from_local
   specs:
     test-kitchen (1.4.1.dev)
       mixlib-shellout (>= 1.2, < 3.0)
