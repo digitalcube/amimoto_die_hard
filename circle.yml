@@ -3,6 +3,5 @@ machine:
   ruby:
     version: 2.1
 test:
-  timeout: 600
   override:
     - "bundle exec kitchen test --destroy=always --concurrency=3 -l warn"
