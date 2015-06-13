@@ -30,7 +30,7 @@ platforms:
 verifier:
   name: shell
   command: bundle exec rspec -fd
-  sleep: 300
+#  sleep: 300
 
 suites:
   - name: default
