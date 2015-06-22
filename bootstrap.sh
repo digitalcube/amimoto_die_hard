@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-for x in {1..60}; do echo '.' ; sleep 5 ; done
+for x in {1..60}; do echo '.' ; sleep 6 ; done
 sudo yum -y update
 
 for x in nginx hhvm php-fpm ; do
