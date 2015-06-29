@@ -3,7 +3,7 @@ require 'spec_helper'
 
 describe server(:amimoto) do
   describe capybara('http://amimoto') do
-    it "Blocks invarid string" do
+    it "Blocks invalid string" do
       visit '/wp-admin/install.php'
       fill_in "instance_id", with: 'hogehoge'
       click_button 'Next Step'
