@@ -1,15 +1,3 @@
-GIT
-  remote: git://github.com/higanworks/test-kitchen.git
-  revision: 014323e11242e8b2634287859214ac20f1a3bef5
-  ref: verify_from_local
-  specs:
-    test-kitchen (1.4.1.dev)
-      mixlib-shellout (>= 1.2, < 3.0)
-      net-scp (~> 1.1)
-      net-ssh (~> 2.7)
-      safe_yaml (~> 1.0)
-      thor (~> 0.18)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -53,6 +41,8 @@ GEM
       excon
       multi_json
       test-kitchen (~> 1.4)
+    kitchen-verifier-shell (0.1.1)
+      test-kitchen (~> 1.4)
     mime-types (2.6.1)
     mini_portile (0.6.2)
     mixlib-shellout (2.1.0)
@@ -87,6 +77,12 @@ GEM
       rspec-support (~> 3.2.0)
     rspec-support (3.2.2)
     safe_yaml (1.0.4)
+    test-kitchen (1.4.1)
+      mixlib-shellout (>= 1.2, < 3.0)
+      net-scp (~> 1.1)
+      net-ssh (~> 2.7)
+      safe_yaml (~> 1.0)
+      thor (~> 0.18)
     thor (0.19.1)
     websocket-driver (0.5.4)
       websocket-extensions (>= 0.1.0)
@@ -100,4 +96,8 @@ PLATFORMS
 DEPENDENCIES
   infrataster
   kitchen-ec2
-  test-kitchen!
+  kitchen-verifier-shell
+  test-kitchen
+
+BUNDLED WITH
+   1.10.3
