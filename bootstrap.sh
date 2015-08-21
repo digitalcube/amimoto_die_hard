@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# should fail when yum update crashed.
+set -e
+
 ## Wait Amimot setup
 I_ID=`/opt/aws/bin/ec2-metadata | grep instance-id | awk '{print $2}'`
 
@@ -13,6 +16,8 @@ sleep 5
   fi
 done
 
+## Note: WorkAround for Aug 2015.
+# sudo yum -y erase php55-cli php55-opcache php55-xml  php55-process php55-common
 sudo yum -y update
 
 for x in nginx hhvm php-fpm ; do
