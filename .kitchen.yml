@@ -36,3 +36,20 @@ suites:
   - name: default
     run_list:
     attributes:
+<%
+## Periodic outputs for CircleCI
+if ENV['CI']
+  ppid = Process.pid
+  Process.fork {
+    loop {
+      puts "."
+      begin
+        Process.getpgid( ppid )
+        sleep 20
+      rescue
+        exit 0
+      end
+    }
+  }
+end
+%>
