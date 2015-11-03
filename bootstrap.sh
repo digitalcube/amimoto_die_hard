@@ -21,7 +21,11 @@ done
 sudo yum -y update
 
 for x in nginx hhvm php-fpm ; do
-  if service $x status ; then service $x restart ; fi
+  if service $x status ; then
+    service $x stop
+    sleep 1
+    service $x start
+  fi
 done
 
 sleep 3
