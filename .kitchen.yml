@@ -22,7 +22,7 @@ platforms:
   - name: pvm-amimoto
     driver:
       image_id: ami-00157b00 # 1.4.0
-      instance_type: t1.micro
+      instance_type: m1.small
   - name: hvm-amimoto
     driver:
       image_id: ami-e6da8088 # 1.2.0
