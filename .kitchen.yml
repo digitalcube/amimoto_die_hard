@@ -1,8 +1,8 @@
 ---
 driver:
   name: ec2
-  region: ap-northeast-1
-  availability_zone: ap-northeast-1c
+  region: us-east-1
+  availability_zone: us-east-1c
   subnet_id: <%= ENV['AWS_SUBNET_ID']  %>
   associate_public_ip: true
   instance_type: t2.micro
@@ -18,14 +18,17 @@ provisioner:
 platforms:
   - name: hiphop-amimoto
     driver:
-      image_id: ami-7e147a7e # 1.1.0
+      image_id: ami-941465fe # 1.1.0
+  - name: http2-amimoto
+    driver:
+      image_id: ami-f2067798 # 0.1
   - name: pvm-amimoto
     driver:
-      image_id: ami-00157b00 # 1.4.0
+      image_id: ami-c91465a3 # 1.4.0
       instance_type: m1.small
   - name: hvm-amimoto
     driver:
-      image_id: ami-e6da8088 # 1.2.0
+      image_id: ami-7c166716 # 1.2.0
 
 verifier:
   name: shell
