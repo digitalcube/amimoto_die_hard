@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    amino (0.0.2)
+      aws-sdk
     aws-sdk (2.0.48)
       aws-sdk-resources (= 2.0.48)
     aws-sdk-core (2.0.48)
@@ -20,6 +22,7 @@ GEM
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     cliver (0.3.2)
+    coderay (1.1.0)
     diff-lcs (1.2.5)
     excon (0.45.3)
     faraday (0.9.1)
@@ -43,6 +46,7 @@ GEM
       test-kitchen (~> 1.4)
     kitchen-verifier-shell (0.1.1)
       test-kitchen (~> 1.4)
+    method_source (0.8.2)
     mime-types (2.6.1)
     mini_portile (0.6.2)
     mixlib-shellout (2.1.0)
@@ -60,9 +64,14 @@ GEM
       cliver (~> 0.3.1)
       multi_json (~> 1.0)
       websocket-driver (>= 0.2.0)
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rack (1.6.1)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rake (10.5.0)
     rspec (3.2.0)
       rspec-core (~> 3.2.0)
       rspec-expectations (~> 3.2.0)
@@ -77,6 +86,7 @@ GEM
       rspec-support (~> 3.2.0)
     rspec-support (3.2.2)
     safe_yaml (1.0.4)
+    slop (3.6.0)
     test-kitchen (1.4.1)
       mixlib-shellout (>= 1.2, < 3.0)
       net-scp (~> 1.1)
@@ -94,10 +104,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  amino
   infrataster
   kitchen-ec2
   kitchen-verifier-shell
+  pry
+  rake
   test-kitchen
 
 BUNDLED WITH
-   1.10.3
+   1.11.2

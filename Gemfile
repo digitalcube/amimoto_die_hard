@@ -7,3 +7,10 @@ gem 'kitchen-verifier-shell'
 gem 'kitchen-ec2'
 # gem "kitchen-vagrant"
 gem 'infrataster'
+
+group :check do
+  gem 'amino'
+  gem 'rake'
+  gem 'pry'
+end
+
