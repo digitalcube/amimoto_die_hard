@@ -19,16 +19,19 @@ platforms:
   - name: hiphop-amimoto
     driver:
       image_id: ami-941465fe # 1.1.0
+  - name: modphp-amimoto
+    driver:
+      image_id: ami-9e9ebef4 # 1.0.1
   - name: http2-amimoto
     driver:
-      image_id: ami-f2067798 # 0.1
+      image_id: ami-c39ebea9 # 1.0.1
   - name: pvm-amimoto
     driver:
       image_id: ami-c91465a3 # 1.4.0
       instance_type: m1.small
   - name: hvm-amimoto
     driver:
-      image_id: ami-7c166716 # 1.2.0
+      image_id: ami-886241e2 # 1.2.1
 
 verifier:
   name: shell
