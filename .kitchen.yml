@@ -18,7 +18,7 @@ provisioner:
 platforms:
   - name: hiphop-amimoto
     driver:
-      image_id: ami-941465fe # 1.1.0
+      image_id: ami-cb4865a1 # 1.1.2
   - name: modphp-amimoto
     driver:
       image_id: ami-9e9ebef4 # 1.0.1
@@ -27,9 +27,12 @@ platforms:
       image_id: ami-c39ebea9 # 1.0.1
   - name: pvm-amimoto
     driver:
-      image_id: ami-c91465a3 # 1.4.0
+      image_id: ami-0d6e4367 # 1.4.2
       instance_type: m1.small
   - name: hvm-amimoto
+    driver:
+      image_id: ami-886241e2 # 1.2.1
+  - name: woo-amimoto
     driver:
       image_id: ami-886241e2 # 1.2.1
 

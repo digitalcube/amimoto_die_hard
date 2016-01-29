@@ -13,7 +13,8 @@ module Infrataster
         Capybara.register_driver CAPYBARA_DRIVER_NAME do |app|
           Capybara::Poltergeist::Driver.new(
             app,{
-              js_errors: false
+              js_errors: false,
+              timeout: 60
             }
           )
         end

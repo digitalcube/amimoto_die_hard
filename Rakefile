@@ -6,6 +6,7 @@ task :default do
   retrieve_id_by_amino("AMIMOTO HTTP2 *")
   retrieve_id_by_amino("AMIMOTO PVM *")
   retrieve_id_by_amino("AMIMOTO HVM *")
+  retrieve_id_by_amino("AMIMOTO WooCommerce *")
 end
 
 def retrieve_id_by_amino(query)
