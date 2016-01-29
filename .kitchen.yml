@@ -34,7 +34,7 @@ platforms:
       image_id: ami-886241e2 # 1.2.1
   - name: woo-amimoto
     driver:
-      image_id: ami-886241e2 # 1.2.1
+      image_id: ami-3165485b # 1.0.2
 
 verifier:
   name: shell
