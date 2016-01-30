@@ -18,7 +18,7 @@ describe server(:amimoto) do
 
     it "Should got 'Welcome' after unlock" do
       visit '/wp-admin/install.php'
-      expect(page).to have_content 'WordPress Select a default language'
+      expect(page).to have_content (/WordPress Select a default language|WordPress Welcome/)
     end
   end
 end
