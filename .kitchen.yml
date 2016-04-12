@@ -18,23 +18,26 @@ provisioner:
 platforms:
   - name: hiphop-amimoto
     driver:
-      image_id: ami-a34071c9 # 1.1.3
+      image_id: ami-228f9848 # 1.2.0
   - name: modphp-amimoto
     driver:
       image_id: ami-58417032 # 1.0.2
-  - name: http2-amimoto
-    driver:
-      image_id: ami-1740717d # 1.0.2
   - name: pvm-amimoto
     driver:
-      image_id: ami-934071f9 # 1.4.3
+      image_id: ami-698c9b03 # 1.5.0
       instance_type: m1.small
   - name: hvm-amimoto
     driver:
       image_id: ami-0c417066 # 1.2.2
-  - name: woo-amimoto
+  - name: woo-hhvm-amimoto
     driver:
       image_id: ami-ec437286 # 1.0.3
+  - name: woo-hvm amimoto
+    driver:
+      image_id: ami-a58d9acf # 1.1.0
+  - name: woo-modphp-amimoto
+    driver:
+      image_id: ami-258e994f # 1.1.0
 
 verifier:
   name: shell
