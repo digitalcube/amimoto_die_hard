@@ -7,7 +7,7 @@ task :default do
   retrieve_id_by_amino("AMIMOTO PVM *")
   retrieve_id_by_amino("AMIMOTO HVM *")
   retrieve_id_by_amino("AMIMOTO WooCommerce HVM *")
-  retrieve_id_by_amino("AMIMOTO WooCommerce 1*")
+  retrieve_id_by_amino("AMIMOTO WooCommerce HHVM *")
   retrieve_id_by_amino("AMIMOTO WooCommerce MOD_PHP *")
 end
 

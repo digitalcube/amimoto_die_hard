@@ -21,17 +21,17 @@ platforms:
       image_id: ami-228f9848 # 1.2.0
   - name: modphp-amimoto
     driver:
-      image_id: ami-58417032 # 1.0.2
+      image_id: ami-878c9bed # 1.1.0
   - name: pvm-amimoto
     driver:
       image_id: ami-698c9b03 # 1.5.0
       instance_type: m1.small
   - name: hvm-amimoto
     driver:
-      image_id: ami-0c417066 # 1.2.2
+      image_id: ami-688c9b02 # 1.3.0
   - name: woo-hhvm-amimoto
     driver:
-      image_id: ami-ec437286 # 1.0.3
+      image_id: ami-168e997c # 1.1.0
   - name: woo-hvm amimoto
     driver:
       image_id: ami-a58d9acf # 1.1.0
