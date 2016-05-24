@@ -3,7 +3,7 @@ require 'amino'
 task :default do
   retrieve_id_by_amino("AMIMOTO HHVM *")
   retrieve_id_by_amino("AMIMOTO MOD_PHP *")
-  retrieve_id_by_amino("AMIMOTO HTTP2 *")
+#  retrieve_id_by_amino("AMIMOTO HTTP2 *")
   retrieve_id_by_amino("AMIMOTO PVM *")
   retrieve_id_by_amino("AMIMOTO HVM *")
   retrieve_id_by_amino("AMIMOTO WooCommerce HVM *")
