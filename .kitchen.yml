@@ -6,6 +6,8 @@ driver:
   subnet_id: <%= ENV['AWS_SUBNET_ID']  %>
   associate_public_ip: true
   instance_type: t2.micro
+  tags:
+    Name: "amimoto-die-hard"
 
 transport:
   username: ec2-user
