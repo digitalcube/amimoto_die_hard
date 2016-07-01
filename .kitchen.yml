@@ -34,7 +34,7 @@ platforms:
   - name: woo-hhvm-amimoto
     driver:
       image_id: ami-168e997c # 1.1.0
-  - name: woo-hvm amimoto
+  - name: woo-hvm-amimoto
     driver:
       image_id: ami-a58d9acf # 1.1.0
   - name: woo-modphp-amimoto
