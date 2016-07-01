@@ -4,4 +4,4 @@ machine:
     version: '2.1'
 test:
   override:
-    - ci/dispatcher.sh`
+    - ci/dispatcher.sh
