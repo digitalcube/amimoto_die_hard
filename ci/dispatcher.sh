@@ -12,4 +12,5 @@ if [ "master" == "$CIRCLE_BRANCH" ] ; then
   exit $?
 fi
 
-bundle exec kitchen test ${CIRCLE_BRANCH} --destroy=always --concurrency=7
+# bundle exec kitchen test ${CIRCLE_BRANCH} --destroy=always --concurrency=7
+bundle exec kitchen test ${CIRCLE_BRANCH} --concurrency=7
