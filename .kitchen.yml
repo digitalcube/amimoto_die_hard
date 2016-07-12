@@ -6,6 +6,7 @@ driver:
   subnet_id: <%= ENV['AWS_SUBNET_ID']  %>
   associate_public_ip: true
   instance_type: t2.micro
+  retryable_tries: 180
   tags:
     Name: "amimoto-die-hard"
 
