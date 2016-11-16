@@ -28,7 +28,7 @@ platforms:
   - name: pvm-amimoto
     driver:
       image_id: ami-698c9b03 # 1.5.0
-      instance_type: m1.small
+      instance_type: m1.medium
   - name: hvm-amimoto
     driver:
       image_id: ami-688c9b02 # 1.3.0
