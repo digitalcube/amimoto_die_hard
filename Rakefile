@@ -1,5 +1,6 @@
 require 'amino'
 
+desc "show list of AMIMOTO AMIs"
 task :default do
   retrieve_id_by_amino("AMIMOTO HHVM *")
   retrieve_id_by_amino("AMIMOTO MOD_PHP *")
@@ -13,11 +14,13 @@ end
 
 namespace :ec2 do
   @ec2 = Aws::EC2::Client.new
+  desc "show list of tagged `amimoto-die-hard` instances"
   task :list do
     instances = get_tagged_instances
     instances.map {|i| puts [i.instance_id, i.tags].to_s }
   end
 
+  desc "terminate all tagged `amimoto-die-hard` instances"
   task :terminate do
     instances = get_tagged_instances
     target = instances.map {|i| i.instance_id }
@@ -26,6 +29,7 @@ namespace :ec2 do
 
   def get_tagged_instances
     instances = @ec2.describe_instances.reservations.first.instances
+    puts instances.size
     instances.select {|i| i.tags.first.value == 'amimoto-die-hard' && i.state.name == 'running' }
   end
 end
