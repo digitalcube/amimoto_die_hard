@@ -14,6 +14,11 @@ sleep 5
     echo
     break
   fi
+  # for autoscale version
+  if [ -f /var/www/html/wp-config.php ] ; then
+    echo
+    break
+  fi
 done
 
 ## Note: WorkAround for Aug 2015.
