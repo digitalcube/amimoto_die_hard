@@ -6,8 +6,8 @@ BLANCHES='
   default-woo-hhvm-amimoto
   default-woo-hvm-amimoto
   default-woo-modphp-amimoto
-  autoscale-amimoto
-  hvm-php7-amimoto
+  default-autoscale-amimoto
+  default-hvm-php7-amimoto
 '
 
 for branch in $BLANCHES; do
