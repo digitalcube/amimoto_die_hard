@@ -41,6 +41,12 @@ platforms:
   - name: woo-modphp-amimoto
     driver:
       image_id: ami-fe021a94 # 1.1.1
+  - name:  autoscale-amimoto
+    driver:
+      image_id: ami-d8ecd9cf #1.4.0
+  - name:  hvm-php7-amimoto
+    driver:
+      image_id: ami-d54a7cc2 #1.4.0
 
 verifier:
   name: shell
