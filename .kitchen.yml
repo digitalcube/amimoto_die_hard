@@ -21,7 +21,7 @@ provisioner:
 platforms:
   - name: hiphop-amimoto
     driver:
-      image_id: ami-23041c49 #1.2.1
+      image_id: ami-fde2d7ea #1.3.0
   - name: modphp-amimoto
     driver:
       image_id: ami-4eeedb59 # 1.2.0
