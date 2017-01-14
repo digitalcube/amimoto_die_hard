@@ -6,13 +6,13 @@ GEM
     amino (0.0.2)
       aws-sdk
     artifactory (2.5.1)
-    aws-sdk (2.6.35)
-      aws-sdk-resources (= 2.6.35)
-    aws-sdk-core (2.6.35)
+    aws-sdk (2.6.44)
+      aws-sdk-resources (= 2.6.44)
+    aws-sdk-core (2.6.44)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.6.35)
-      aws-sdk-core (= 2.6.35)
+    aws-sdk-resources (2.6.44)
+      aws-sdk-core (= 2.6.44)
     aws-sigv4 (1.0.0)
     capybara (2.11.0)
       addressable
@@ -25,7 +25,7 @@ GEM
     coderay (1.1.1)
     diff-lcs (1.2.5)
     excon (0.54.0)
-    faraday (0.10.0)
+    faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.10.1)
       faraday (>= 0.7.4, < 1.0)
@@ -64,7 +64,7 @@ GEM
     net-ssh (3.2.0)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
-    nokogiri (1.6.8.1)
+    nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     poltergeist (1.12.0)
       capybara (~> 2.1)
@@ -74,7 +74,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    public_suffix (2.0.4)
+    public_suffix (2.0.5)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -122,4 +122,4 @@ DEPENDENCIES
   test-kitchen
 
 BUNDLED WITH
-   1.13.6
+   1.13.7
