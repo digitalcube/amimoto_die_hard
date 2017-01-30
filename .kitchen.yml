@@ -40,7 +40,7 @@ platforms:
       image_id: ami-d18f6dc7 # 1.2.0
   - name: woo-modphp-amimoto
     driver:
-      image_id: ami-fe021a94 # 1.1.1
+      image_id: ami-a77999b1 # 1.3.0
   - name:  autoscale-amimoto
     driver:
       image_id: ami-ea0cedfc #1.4.0
