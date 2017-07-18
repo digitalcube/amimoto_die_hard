@@ -34,3 +34,10 @@ for x in nginx hhvm php-fpm ; do
 done
 
 sleep 3
+
+MPHP=`cat /opt/local/amimoto.json | jq .mod_php7.enabled`
+if [ "$MPHP" == "true" ] ; then
+  set -x
+  echo 'waitting for httpd 5mins...'
+  timeout 300 bash -c 'while ! curl -sf 127.0.0.1:8080 ; do sleep 1 ; done'
+fi
