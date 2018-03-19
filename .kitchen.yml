@@ -7,6 +7,7 @@ driver:
   security_group_ids:
     - <%= ENV['AWS_SG']  %>
   associate_public_ip: true
+  interface: dns
   instance_type: t2.micro
   retryable_tries: 180
   tags:
