@@ -6,6 +6,18 @@ jobs:
       - image: "ruby:2.4"
     steps:
       - checkout
+        - restore_cache:
+            key: rubygems-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: Bundle gems
+          command: bundle install --path vendor/bundle
+      - save_cache:
+          key: rubygems-{{ checksum "Gemfile.lock" }}
+          paths:
+          - vendor/bundle
+      - add_ssh_keys:
+          fingerprints:
+          - "5e:14:7a:cb:1d:0f:7c:01:34:8e:26:bd:69:40:61:80"
       - run:
           name: Run test
           command: ci/dispatcher.sh
