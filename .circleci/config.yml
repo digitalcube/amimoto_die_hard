@@ -35,13 +35,13 @@ workflows:
           cron: "55 2 * * *"
           filters:
             branches:
-            only:
-              - default-autoscale-amimoto
-              - default-hiphop-amimoto
-              - default-hvm-amimoto
-              - default-hvm-php7-amimoto
-              - default-modphp-amimoto
-              - default-pvm-amimoto
-              - default-woo-hhvm-amimoto
-              - default-woo-hvm-amimoto
-              - default-woo-modphp-amimoto
+              only:
+                - default-autoscale-amimoto
+                - default-hiphop-amimoto
+                - default-hvm-amimoto
+                - default-hvm-php7-amimoto
+                - default-modphp-amimoto
+                - default-pvm-amimoto
+                - default-woo-hhvm-amimoto
+                - default-woo-hvm-amimoto
+                - default-woo-modphp-amimoto
