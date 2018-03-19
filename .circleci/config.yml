@@ -24,6 +24,9 @@ jobs:
 
 workflows:
   version: 2
+  build:
+    jobs:
+      - build
   daily:
     triggers:
       - schedule:
