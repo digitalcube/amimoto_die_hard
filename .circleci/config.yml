@@ -3,7 +3,7 @@ version: 2.0
 jobs:
   build:
     docker:
-      - image: "ruby:2.4"
+      - image: "circleci/ruby:2.4-browsers"
     steps:
       - checkout
       - restore_cache:
