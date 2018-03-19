@@ -24,10 +24,12 @@ jobs:
 
 workflows:
   version: 2
-  build:
+  default:
     jobs:
       - build
   daily:
+    jobs:
+      - build
     triggers:
       - schedule:
           cron: "55 2 * * *"
@@ -43,5 +45,3 @@ workflows:
               - default-woo-hhvm-amimoto
               - default-woo-hvm-amimoto
               - default-woo-modphp-amimoto
-    jobs:
-      - build
