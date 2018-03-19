@@ -21,3 +21,24 @@ jobs:
       - run:
           name: Run test
           command: ci/dispatcher.sh
+
+workflows:
+  version: 2
+  daily:
+    triggers:
+      - schedule:
+          cron: "0 4 * * *"
+          filters:
+            branches:
+            only:
+              - default-autoscale-amimoto
+              - default-hiphop-amimoto
+              - default-hvm-amimoto
+              - default-hvm-php7-amimoto
+              - default-modphp-amimoto
+              - default-pvm-amimoto
+              - default-woo-hhvm-amimoto
+              - default-woo-hvm-amimoto
+              - default-woo-modphp-amimoto
+    jobs:
+      - build
