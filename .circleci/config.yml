@@ -1,0 +1,11 @@
+---
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: "ruby:2.4"
+    steps:
+      - checkout
+      - run:
+          name: Run test
+          command: ci/dispatcher.sh
