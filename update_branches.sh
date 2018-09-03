@@ -1,13 +1,9 @@
 BLANCHES='
-  default-hiphop-amimoto
   default-hvm-amimoto
   default-modphp-amimoto
-  default-pvm-amimoto
-  default-woo-hhvm-amimoto
   default-woo-hvm-amimoto
   default-woo-modphp-amimoto
   default-autoscale-amimoto
-  default-hvm-php7-amimoto
 '
 
 for branch in $BLANCHES; do
