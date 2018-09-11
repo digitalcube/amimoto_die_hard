@@ -1,4 +1,5 @@
 require 'infrataster/rspec'
+require 'selenium-webdriver'
 
 Infrataster::Server.define(:amimoto) do |server|
     server.address = ENV['KITCHEN_HOSTNAME']
@@ -12,9 +13,13 @@ module Infrataster
         def self.prepare_session
           Capybara.register_driver CAPYBARA_DRIVER_NAME do |app|
             Capybara::Selenium::Driver.new(
-              app,{
-                browser: :chrome
-              }
+              app,
+              browser: :chrome,
+              desired_capabilities: ::Selenium::WebDriver::Remote::Capabilities.chrome(
+                chrome_options: {
+                  args: %w(headless disable-gpu),
+                },
+              )
             )
           end
           Capybara::Session.new(CAPYBARA_DRIVER_NAME)
