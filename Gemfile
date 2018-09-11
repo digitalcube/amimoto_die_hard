@@ -7,6 +7,7 @@ gem 'test-kitchen'
 gem 'kitchen-ec2'
 # gem "kitchen-vagrant"
 gem 'infrataster'
+gem 'selenium-webdriver'
 
 group :check do
   gem 'amino'

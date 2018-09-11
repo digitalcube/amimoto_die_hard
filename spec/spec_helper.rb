@@ -9,18 +9,26 @@ module Infrataster
   module Contexts
     class CapybaraContext
       class_eval do
-      def self.prepare_session
-        Capybara.register_driver CAPYBARA_DRIVER_NAME do |app|
-          Capybara::Poltergeist::Driver.new(
-            app,{
-              js_errors: false,
-              timeout: 60
-            }
-          )
+        def self.prepare_session
+          Capybara.register_driver CAPYBARA_DRIVER_NAME do |app|
+            Capybara::Selenium::Driver.new(
+              app,{
+                browser: :chrome
+              }
+            )
+          end
+          Capybara::Session.new(CAPYBARA_DRIVER_NAME)
         end
-        Capybara::Session.new(CAPYBARA_DRIVER_NAME)
+
+        def before_each(example)
+          example.example_group_instance.extend(Capybara::RSpecMatchers)
+
+          # session.driver.headers = {"Host" => resource.uri.host}
+
+          address, port = server.forward_port(resource.uri.port)
+          Capybara.app_host = "http://#{address}:#{port}"
+        end
       end
-    end
     end
   end
 end
