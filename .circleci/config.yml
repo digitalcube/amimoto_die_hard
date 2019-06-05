@@ -9,6 +9,9 @@ jobs:
       - restore_cache:
           key: rubygems-{{ checksum "Gemfile.lock" }}
       - run:
+          name: update bundler
+          command: gem install bundler --no-document
+      - run:
           name: Bundle gems
           command: bundle install --path vendor/bundle
       - save_cache:
