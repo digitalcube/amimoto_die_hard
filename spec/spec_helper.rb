@@ -17,7 +17,7 @@ module Infrataster
               browser: :chrome,
               desired_capabilities: ::Selenium::WebDriver::Remote::Capabilities.chrome(
                 chrome_options: {
-                  args: %w(headless disable-gpu),
+                  args: %w(headless disable-gpu disable-site-isolation-trials),
                 },
               )
             )
