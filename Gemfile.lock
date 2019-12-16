@@ -804,7 +804,7 @@ GEM
     ed25519 (1.2.4)
     equatable (0.6.1)
     erubis (2.7.0)
-    excon (0.67.0)
+    excon (0.71.0)
     faraday (0.17.0)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.13.1)
