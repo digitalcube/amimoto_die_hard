@@ -21,6 +21,9 @@ sleep 5
   fi
 done
 
+# check nginx is healty?
+timeout 300 bash -c 'while ! curl -sf 127.0.0.1:80 ; do sleep 1 ; done'
+
 ## Note: WorkAround for Aug 2015.
 # sudo yum -y erase php55-cli php55-opcache php55-xml  php55-process php55-common
 sudo yum -y update
