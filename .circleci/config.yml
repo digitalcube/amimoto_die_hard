@@ -3,7 +3,7 @@ version: 2.0
 jobs:
   build:
     docker:
-      - image: "circleci/ruby:2.4-browsers"
+      - image: "circleci/ruby:2.6-browsers"
     steps:
       - checkout
       - restore_cache:
@@ -14,6 +14,9 @@ jobs:
       - run:
           name: Bundle gems
           command: bundle install --path vendor/bundle
+      - run:
+          name: Bundle gems
+          command: bundle binstubs --all
       - save_cache:
           key: rubygems-{{ checksum "Gemfile.lock" }}
           paths:
