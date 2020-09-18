@@ -8,8 +8,8 @@ BLANCHES='
 
 for branch in $BLANCHES; do
  git checkout $branch
- git merge master
+ git merge main
  git push origin $branch
 done
 
-git checkout master
+git checkout main

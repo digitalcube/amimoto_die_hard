@@ -7,7 +7,7 @@ if [ ! "true" == "$CI" ] ; then
   exit $?
 fi
 
-if [ "master" == "$CIRCLE_BRANCH" ] ; then
+if [ "main" == "$CIRCLE_BRANCH" ] ; then
   bundle exec kitchen test --destroy=always --concurrency=9
   exit $?
 fi
