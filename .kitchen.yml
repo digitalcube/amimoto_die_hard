@@ -8,7 +8,7 @@ driver:
     - <%= ENV['AWS_SG']  %>
   associate_public_ip: true
   interface: dns
-  instance_type: t3.micro
+  instance_type: t3a.micro
   retryable_tries: 180
   tags:
     Name: "amimoto-die-hard"
