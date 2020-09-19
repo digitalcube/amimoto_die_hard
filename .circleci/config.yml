@@ -32,10 +32,14 @@ workflows:
   version: 2
   default:
     jobs:
-      - build
+      - build:
+          context:
+            - opsrock_amimoto_dir_hard
   daily:
     jobs:
-      - build
+      - build:
+          context:
+            - opsrock_amimoto_dir_hard
     triggers:
       - schedule:
           cron: "55 2 * * *"
