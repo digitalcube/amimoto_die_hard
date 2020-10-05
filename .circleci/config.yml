@@ -4,6 +4,9 @@ jobs:
   build:
     docker:
       - image: "circleci/ruby:2.6-browsers"
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
       - restore_cache:
@@ -32,14 +35,14 @@ workflows:
   version: 2
   default:
     jobs:
-      - build
-          # context:
-          #   - opsrock_amimoto_dir_hard
+      - build:
+          context:
+            - docker-hub-gsd
   daily:
     jobs:
-      - build
-          # context:
-          #   - opsrock_amimoto_dir_hard
+      - build:
+          context:
+            - docker-hub-gsd
     triggers:
       - schedule:
           cron: "55 2 * * *"
