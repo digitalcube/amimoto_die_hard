@@ -991,7 +991,7 @@ GEM
       multi_json (~> 1.14)
     method_source (1.0.0)
     mini_mime (1.0.2)
-    mini_portile2 (2.4.0)
+    mini_portile2 (2.5.1)
     mixlib-install (3.12.3)
       mixlib-shellout
       mixlib-versioning
@@ -1006,8 +1006,9 @@ GEM
     net-ssh (6.1.0)
     net-ssh-gateway (2.0.0)
       net-ssh (>= 4.0.0)
-    nokogiri (1.10.10)
-      mini_portile2 (~> 2.4.0)
+    nokogiri (1.11.4)
+      mini_portile2 (~> 2.5.0)
+      racc (~> 1.4)
     nori (2.6.0)
     pastel (0.8.0)
       tty-color (~> 0.5)
@@ -1019,6 +1020,7 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
     public_suffix (4.0.6)
+    racc (1.5.2)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
