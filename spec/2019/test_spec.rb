@@ -1,8 +1,9 @@
 # coding: utf-8
 require 'spec_helper'
 
-describe server(:amimoto) do
-  describe capybara('http://amimoto') do
+# describe server(:amimoto) do
+describe ENV['KITCHEN_HOSTNAME'] do
+  # describe capybara("http://#{ENV['KITCHEN_HOSTNAME']}") do
     it "Logs in with instance_id" do
       visit '/wp-login.php'
       # pp page.driver.browser.manage.all_cookies
@@ -15,4 +16,4 @@ describe server(:amimoto) do
       # assert_title 'Dashboard'
     end
   end
-end
+# end
