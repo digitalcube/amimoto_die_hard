@@ -16,9 +16,6 @@ jobs:
       name: default
     steps:
       # - browser-tools/install-chromedriver
-      - run:
-          command: /usr/local/bin/chromedriver
-          background: true
       - checkout
       - restore_cache:
           key: rubygems-{{ checksum "Gemfile.lock" }}
@@ -35,6 +32,9 @@ jobs:
           key: rubygems-{{ checksum "Gemfile.lock" }}
           paths:
           - vendor/bundle
+      - run:
+          command: /usr/local/bin/chromedriver
+          background: true
       - add_ssh_keys:
           fingerprints:
           - "5e:14:7a:cb:1d:0f:7c:01:34:8e:26:bd:69:40:61:80"
