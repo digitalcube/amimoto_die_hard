@@ -3,7 +3,7 @@ version: 2.0
 jobs:
   build:
     docker:
-      - image: "circleci/ruby:2.6-browsers"
+      - image: "cimg/ruby:2.6-browsers"
         auth:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_PASSWORD
