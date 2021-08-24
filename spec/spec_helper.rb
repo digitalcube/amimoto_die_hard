@@ -11,7 +11,8 @@ Capybara.register_driver :headless_chrome do |app|
       chrome_options: {
         args: %w(headless disable-gpu disable-site-isolation-trials),
       },
-    )
+    ),
+    timeout: 60
   )
 end
 
