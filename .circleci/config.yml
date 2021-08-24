@@ -8,6 +8,9 @@ jobs:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_PASSWORD
     steps:
+      - run:
+          command: chromedriver
+          background: true
       - checkout
       - restore_cache:
           key: rubygems-{{ checksum "Gemfile.lock" }}
