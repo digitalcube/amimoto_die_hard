@@ -1,5 +1,8 @@
 ---
-version: 2.0
+version: 2.1
+orbs:
+  browser-tools: circleci/browser-tools@1.2.1
+
 jobs:
   build:
     docker:
@@ -8,9 +11,7 @@ jobs:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_PASSWORD
     steps:
-      - run:
-          command: chromedriver
-          background: true
+      - browser-tools/install-chromedriver
       - checkout
       - restore_cache:
           key: rubygems-{{ checksum "Gemfile.lock" }}
