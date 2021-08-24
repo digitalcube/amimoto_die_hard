@@ -1,6 +1,6 @@
 version: 2.1
-orbs:
-  browser-tools: circleci/browser-tools@1.2.1
+# orbs:
+#   browser-tools: circleci/browser-tools@1.2.1
 
 executors:
   default:
@@ -15,7 +15,10 @@ jobs:
     executor:
       name: default
     steps:
-      - browser-tools/install-chromedriver
+      # - browser-tools/install-chromedriver
+      - run:
+          command: /usr/local/bin/chromedriver
+          background: true
       - checkout
       - restore_cache:
           key: rubygems-{{ checksum "Gemfile.lock" }}
