@@ -1,15 +1,19 @@
----
 version: 2.1
 orbs:
   browser-tools: circleci/browser-tools@1.2.1
 
-jobs:
-  build:
+executors:
+  default:
     docker:
-      - image: "cimg/ruby:2.6-browsers"
+      - image: cimg/ruby:2.6-browsers
         auth:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_PASSWORD
+
+jobs:
+  build:
+    executor:
+      name: default
     steps:
       - browser-tools/install-chromedriver
       - checkout
@@ -36,7 +40,6 @@ jobs:
           command: ci/dispatcher.sh
 
 workflows:
-  version: 2
   default:
     jobs:
       - build:
