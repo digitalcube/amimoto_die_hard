@@ -16,8 +16,17 @@ Capybara.register_driver :headless_chrome do |app|
   )
 end
 
-Capybara.default_driver = :headless_chrome
-Capybara.javascript_driver = :headless_chrome
+Capybara.register_driver :headless_firefox do |app|
+  options = Selenium::WebDriver::Firefox::Options.new
+  options.headless! # added on https://github.com/SeleniumHQ/selenium/pull/4762
+
+  Capybara::Selenium::Driver.new app,
+    browser: :firefox,
+    options: options
+end
+
+Capybara.default_driver = :headless_firefox
+Capybara.javascript_driver = :headless_firefox
 Capybara.app_host = "http://#{ENV['KITCHEN_HOSTNAME']}"
 
 
