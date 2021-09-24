@@ -24,28 +24,16 @@ provisioner:
 platforms:
   - name: hvm-amimoto
     driver:
-      image_id: ami-080b18709557d5afd # 6.0
-  - name: woo-modphp-amimoto
-    driver:
-      image_id: ami-74d0570b # 5.1.0
-    verifier:
-      name: shell
-      command: bundle exec rspec -fd spec/legacy/
+      image_id: ami-0bbcfb8bb5e1b9b1c # 6.2
   - name: modphp-amimoto
     driver:
-      image_id: ami-07889a02ff253da5c # 6.0
+      image_id: ami-034ade18bdf015d66 # 6.2
   - name: woo-hvm-amimoto
     driver:
-      image_id: ami-c6d750b9 # 5.1.0
-    verifier:
-      name: shell
-      command: bundle exec rspec -fd spec/legacy/
-  - name:  autoscale-amimoto
+      image_id: ami-081daf210f9e5e971 # 6.2
+  - name: woo-modphp-amimoto
     driver:
-      image_id: ami-dfd354a0 # 5.1.0
-    verifier:
-      name: shell
-      command: bundle exec rspec -fd spec/legacy/
+      image_id: ami-018353cae21b35ef7 # 6.2
 
 verifier:
   name: shell

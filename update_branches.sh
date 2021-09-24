@@ -3,7 +3,6 @@ BLANCHES='
   default-modphp-amimoto
   default-woo-hvm-amimoto
   default-woo-modphp-amimoto
-  default-autoscale-amimoto
 '
 
 for branch in $BLANCHES; do

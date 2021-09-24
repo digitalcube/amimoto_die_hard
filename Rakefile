@@ -3,17 +3,17 @@ require 'amino'
 desc "show list of AMIMOTO AMIs"
 task :default do
   # retrieve_id_by_amino("AMIMOTO HHVM *")
-  retrieve_id_by_amino("AMIMOTO MOD_PHP *")
+  retrieve_id_by_amino("AMIMOTO2 MOD_PHP *")
 #  retrieve_id_by_amino("AMIMOTO HTTP2 *")
   # retrieve_id_by_amino("AMIMOTO PVM *")
-  retrieve_id_by_amino("AMIMOTO HVM 5*")
-  retrieve_id_by_amino("AMIMOTO WooCommerce HVM *")
+  retrieve_id_by_amino("AMIMOTO2 HVM *")
+  retrieve_id_by_amino("AMIMOTO2 WooCommerce HVM *")
   # retrieve_id_by_amino("AMIMOTO WooCommerce HHVM *")
-  retrieve_id_by_amino("AMIMOTO WooCommerce MOD_PHP *")
+  retrieve_id_by_amino("AMIMOTO2 WooCommerce MOD_PHP *")
 end
 
 task :all do
-  retrieve_all_id_by_version("AMIMOTO*5.1.0*")
+  retrieve_all_id_by_version("AMIMOTO2*6.2*")
 end
 
 namespace :ec2 do
