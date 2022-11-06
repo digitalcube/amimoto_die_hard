@@ -24,16 +24,16 @@ provisioner:
 platforms:
   - name: hvm-amimoto
     driver:
-      image_id: ami-0bbcfb8bb5e1b9b1c # 6.2
+      image_id: ami-06dcd90ae27b13ace # 6.4
   - name: modphp-amimoto
     driver:
-      image_id: ami-034ade18bdf015d66 # 6.2
+      image_id: ami-0ce707520e7584280 # 6.4
   - name: woo-hvm-amimoto
     driver:
-      image_id: ami-081daf210f9e5e971 # 6.2
+      image_id: ami-0794cbbdbb990e140 # 6.4
   - name: woo-modphp-amimoto
     driver:
-      image_id: ami-018353cae21b35ef7 # 6.2
+      image_id: ami-0e87d5f6934111e69 # 6.4
 
 verifier:
   name: shell
