@@ -16,8 +16,8 @@ jobs:
     executor:
       name: default
     steps:
-      - browser-tools/install-browser-tools
       - checkout
+      - browser-tools/install-browser-tools
       - restore_cache:
           key: rubygems-{{ checksum "Gemfile.lock" }}
       - run:
