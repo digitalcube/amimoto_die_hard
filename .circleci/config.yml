@@ -50,11 +50,13 @@ workflows:
       - build:
           context:
             - docker-hub-gsd
+            - opsrock_amimoto_dir_hard
   daily:
     jobs:
       - build:
           context:
             - docker-hub-gsd
+            - opsrock_amimoto_dir_hard
     triggers:
       - schedule:
           cron: "55 2 * * *"
