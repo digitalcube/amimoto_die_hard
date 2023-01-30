@@ -12,6 +12,7 @@ executors:
 
 jobs:
   build:
+    working_directory: ~/{{REPO_NAME}}
     executor:
       name: default
     steps:
