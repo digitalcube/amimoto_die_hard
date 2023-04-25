@@ -8,7 +8,8 @@ if [ ! "true" == "$CI" ] ; then
 fi
 
 if [ "main" == "$CIRCLE_BRANCH" ] ; then
-  bundle exec kitchen test --destroy=always --concurrency=9
+  bundle exec kitchen test --destroy=always default-hvm-amimoto
+  bundle exec kitchen test --destroy=always woo-hvm-amimoto
   exit $?
 fi
 
