@@ -1,11 +1,12 @@
 version: 2.1
 orbs:
-  browser-tools: circleci/browser-tools@1.4.1
+  browser-tools: circleci/browser-tools@1.4.6
+
 
 executors:
   default:
     docker:
-      - image: cimg/ruby:2.6-browsers
+      - image: cimg/ruby:2.7-browsers
         auth:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_PASSWORD
