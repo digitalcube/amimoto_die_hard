@@ -19,8 +19,8 @@ jobs:
       - checkout
       - browser-tools/install-browser-tools
       - aws-cli/setup:
-          role-arn: AWS_IAM_ROLE_ARN
-          aws-region: AWS_REGION
+          role-arn: $AWS_IAM_ROLE_ARN
+          aws-region: $AWS_REGION
           # optional parameters
           profile-name: default
           role-session-name: "example-session"
