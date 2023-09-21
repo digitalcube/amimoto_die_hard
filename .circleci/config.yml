@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   browser-tools: circleci/browser-tools@1.4.6
-
+  aws-cli: circleci/aws-cli@3.1.5
 
 executors:
   default:
@@ -18,6 +18,13 @@ jobs:
     steps:
       - checkout
       - browser-tools/install-browser-tools
+      - aws-cli/setup:
+          role-arn: AWS_IAM_ROLE_ARN
+          aws-region: AWS_REGION
+          # optional parameters
+          profile-name: default
+          role-session-name: "example-session"
+          session-duration: "1800"
       - restore_cache:
           key: rubygems-{{ checksum "Gemfile.lock" }}
       - run:
