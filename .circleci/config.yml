@@ -60,19 +60,3 @@ workflows:
           context:
             - docker-hub-gsd
             - opsrock_amimoto_dir_hard
-  daily:
-    jobs:
-      - build:
-          context:
-            - docker-hub-gsd
-            - opsrock_amimoto_dir_hard
-    triggers:
-      - schedule:
-          cron: "55 2 * * *"
-          filters:
-            branches:
-              only:
-                - default-hvm-amimoto
-                - default-modphp-amimoto
-                - default-woo-hvm-amimoto
-                - default-woo-modphp-amimoto
